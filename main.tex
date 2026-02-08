@@ -1,0 +1,70 @@
+\documentclass[12pt, letterpaper]{article}
+% =====================
+% Paquetes
+% =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{graphicx}
+
+% Agregar caption ANTES de biblatex
+\usepackage{caption}
+
+% Ahora cargar biblatex
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{referencias.bib}
+
+% El resto de paquetes
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyphenat}
+\usepackage{ragged2e} 
+\usepackage{placeins}
+
+\geometry{margin=1in}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{1em}
+\onehalfspacing
+
+% Configuración títulos
+\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{1em}{}
+\renewcommand{\contentsname}{Índice}
+
+% Encabezados y pies
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=5cm]{./logo_universidad.png}\par
+    \vspace{1cm}
+    
+    {\bfseries\LARGE Primera entrega: Análisis de involucrados \par}
+    \vspace{2cm}
+    {\large Autores: Jorge Luis Araque, Juan Camilo Velasquez, Jhoan Esteban Corrales y  Juan Esteban Cardona\par}
+    {\large Docente: Julio César Lopez Betancur\par}
+    \vfill
+    {\Large Facultad de Ingenierías, Universidad Tecnológica de Pereira \par}
+    {\large Curso: Administración de Proyectos de Software\par}
+    {\large Pereira, Colombia \\ \today \par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\input{formulacion/stakeholders/stakeholders.tex}
+
+\end{document}
