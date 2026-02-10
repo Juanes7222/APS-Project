@@ -1,35 +1,36 @@
 \documentclass[12pt, letterpaper]{article}
+
 % =====================
 % Paquetes
 % =====================
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage[spanish]{babel}
+\usepackage{lmodern}
 \usepackage{setspace}
+\usepackage[hyphens]{url}
 \usepackage{amsmath}
 \usepackage{geometry}
-\usepackage{array}
-\usepackage{graphicx}
-
-% Agregar caption ANTES de biblatex
-\usepackage{caption}
-
-% Ahora cargar biblatex
-\usepackage[style=apa, backend=biber]{biblatex}
-\addbibresource{referencias.bib}
-
-% El resto de paquetes
-\usepackage{float}
-\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{fancyhdr}
+\usepackage{array}
 \usepackage{titlesec}
-\usepackage{url}
+\usepackage{graphicx}
+\usepackage{pdflscape} 
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.bib} % Archivo de bibliografía (no usado - bibliografía manual en references.tex)
 \usepackage{xcolor}
 \usepackage{hyphenat}
 \usepackage{ragged2e} 
 \usepackage{placeins}
-
+\usepackage{csquotes}
+\usepackage{pgfplotstable}
 \geometry{margin=1in}
 \setlength{\parindent}{1.27cm}
 \setlength{\parskip}{1em}
@@ -38,7 +39,6 @@
 % Configuración títulos
 \titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection.}{1em}{}
 \titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{1em}{}
-\renewcommand{\contentsname}{Índice}
 
 % Encabezados y pies
 \pagestyle{fancy}
@@ -62,8 +62,11 @@
     {\large Pereira, Colombia \\ \today \par}
 \end{titlepage}
 
+\renewcommand{\contentsname}{Tabla de contenido}
+% Índice
 \tableofcontents
 \newpage
+
 
 \input{formulacion/stakeholders/stakeholders.tex}
 
