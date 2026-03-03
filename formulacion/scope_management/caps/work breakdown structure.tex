@@ -1,0 +1,57 @@
+\subsection{Estructura de Desglose de Trabajo (EDT/WBS)}
+
+La EDT constituye la base fundamental sobre la cual se planifica el costo, el cronograma y la calidad del proyecto Este proceso consiste en subdividir los entregables y el trabajo del proyecto en componentes más pequeños y fáciles de manejar
+
+\subsubsection{Jerarquía de la EDT (WBS)}
+A continuación, se presenta la descomposición jerárquica del proyecto de software para la agilización de licencias:
+
+\begin{itemize}
+    \item \textbf{1. Gestión del Proyecto}         \begin{itemize}
+            \item 1.1 Elaboración del Plan de Gestión de Alcance y Requisitos.
+            \item 1.2 Acta de Constitución del Proyecto 
+            \item 1.3 Matriz de Trazabilidad de Requisitos .
+        \end{itemize}
+    \item \textbf{2. Módulo de Interoperabilidad y Conectividad}
+        \begin{itemize}
+            \item 2.1 Desarrollo de API de integración con RUNT y CRC.
+            \item 2.2 Implementación de validación biométrica en tiempo real.
+        \end{itemize}
+    \item \textbf{3. Portal Web y Aplicación Móvil (Front-end)}
+        \begin{itemize}
+            \item 3.1 Módulo de agendamiento de citas y carga de documentos.
+            \item 3.2 Integración de pasarela de pagos para derechos de trámite.
+        \end{itemize}
+    \item \textbf{4. Motor de Inteligencia Artificial (IA)}
+        \begin{itemize}
+            \item 4.1 Desarrollo de algoritmo para análisis predictivo de demanda.
+            \item 4.2 Tablero de control (Dashboard) para gestión de personal administrativo.
+        \end{itemize}
+    \item \textbf{5. Control de Calidad y Transición}
+        \begin{itemize}
+            \item 5.1 Ejecución de pruebas funcionales, de seguridad y desempeño.
+            \item 5.2 Elaboración de manuales y plan de capacitación al personal.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Diccionario de la EDT (Resumen de Paquetes de Trabajo)}
+El diccionario de la EDT proporciona una descripción detallada del trabajo a realizar en cada paquete y los criterios necesarios para su validación.
+
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabulary}{\textwidth}{@{}LLLL@{}}
+\toprule
+\textbf{Cód.} & \textbf{Paquete} & \textbf{Descripción del Trabajo} & \textbf{Criterio de Aceptación} \\ \midrule
+2.1 & Integración API & Desarrollo de servicios web para consulta de datos en el RUNT. & Conexión estable con respuesta $<$ 2s. \\
+4.1 & Motor IA & Algoritmo predictivo basado en fechas de vencimiento de licencias. & Precisión en predicción de demanda $>$ 85\%. \\
+5.2 & Capacitación & Sesiones de formación para el personal en el uso del nuevo sistema. & 100\% del personal administrativo certificado. \\\bottomrule
+\end{tabulary}
+\end{table}
+
+\subsubsection{Mantenimiento y Aprobación de la EDT}
+Para garantizar que la EDT se mantenga alineada con los objetivos del proyecto, se establecen los siguientes procesos :
+\begin{itemize}
+    \item \textbf{Mantenimiento:} Cualquier modificación en la estructura debe derivar de un cambio aprobado en el enunciado del alcance .
+    \item \textbf{Control de Cambios:} Las solicitudes de cambio que afecten la EDT se procesarán mediante el Control Integrado de Cambios .
+    \item \textbf{Aprobación:} La EDT y su diccionario deben ser validados formalmente por el Patrocinador del Proyecto y los interesados clave antes de iniciar la ejecución .
+\end{itemize}
