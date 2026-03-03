@@ -1,0 +1,75 @@
+\subsection{Supuestos, Restricciones y Exclusiones del proyecto de software}
+
+A continuación, se definen los límites del alcance del proyecto, identificando lo que no está incluido, las limitaciones impuestas desde el inicio y las condiciones que se asumen como verdaderas para la planificación estratégica del sistema nacional de trámites de licencias de conducción.
+
+\subsubsection{Exclusiones}
+
+\begin{itemize}
+    \item \textbf{E-01 (ID EDT 1.3.1):} No se incluye el desarrollo de aplicaciones móviles nativas (Android/iOS) para los funcionarios de ventanilla ni para el portal ciudadano.
+    \begin{itemize}
+        \item \textit{Justificación:} El alcance inicial define el desarrollo de una plataforma web (SaaS en la nube) que sea responsiva para acceder desde navegadores móviles, priorizando el despliegue rápido nacional sobre el desarrollo de apps específicas.
+        \item \textit{Impacto:} Cualquier solicitud futura de funciones exclusivas de hardware móvil quedará fuera de esta fase del proyecto.
+        \item \textbf{Responsable:} Project Manager.
+    \end{itemize}
+
+    \item \textbf{E-02 (ID EDT 1.3.1):} No se incluye la compra, adecuación ni mantenimiento de infraestructura física de servidores para las sedes de tránsito.
+    \begin{itemize}
+        \item \textit{Justificación:} Estratégicamente, el sistema operará bajo un modelo 100\% alojado en la nube pública, en cumplimiento con las directivas de gobierno digital.
+        \item \textit{Impacto:} El presupuesto de infraestructura se destinará a servicios cloud, y la adquisición de hardware físico se limitará a equipos de oficina y periféricos para los operadores.
+        \item \textbf{Responsable:} Arquitecto de Software / Área de TI.
+    \end{itemize}
+
+    \item \textbf{E-03 (ID EDT 1.1.7):} No se incluye el proceso físico de producción, impresión y distribución del plástico (PVC) de las licencias de conducción.
+    \begin{itemize}
+        \item \textit{Justificación:} La materialización del carnet físico es un proceso operativo tercerizado. El alcance del software termina al enviar la orden encriptada a la cola de impresión y emitir la versión virtual de la licencia.
+        \item \textit{Impacto:} Las fallas logísticas en la entrega del plástico o escasez de insumos de impresión no son responsabilidad del equipo de software.
+        \item \textbf{Responsable:} Proveedor externo de personalización.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Restricciones}
+
+\begin{itemize}
+    \item \textbf{R-01 (ID EDT 1.1.6):} Cumplimiento estricto del marco normativo nacional y regulaciones de tratamiento de datos sensibles.
+    \begin{itemize}
+        \item \textit{Fuente / Evidencia:} Ley 769 de 2002 (Código Nacional de Tránsito), Ley 1581 de 2012 (Habeas Data) y directrices de la Superintendencia de Industria y Comercio sobre biometría.
+        \item \textit{Impacto:} Limita las tecnologías utilizables, obligando al sistema a incorporar desde su diseño inicial algoritmos de cifrado robustos y trazabilidad inalterable para la auditoría de los datos médicos y biométricos de los ciudadanos.
+        \item \textbf{Responsable:} Responsable de protección de datos y cumplimiento.
+    \end{itemize}
+
+    \item \textbf{R-02 (ID EDT 1.1.5):} Dependencia de la arquitectura y disponibilidad de los sistemas centrales del Estado.
+    \begin{itemize}
+        \item \textit{Fuente / Evidencia:} Necesidad de interoperabilidad con el Registro Único Nacional de Tránsito (RUNT).
+        \item \textit{Impacto:} Condiciona el diseño de la arquitectura del software, obligando a construir un modo de contingencia que permita operar localmente en las sedes físicas cuando los servicios nacionales de consulta presenten caídas.
+        \item \textbf{Responsable:} Coordinador Técnico de Integraciones.
+    \end{itemize}
+
+    \item \textbf{R-03 (ID EDT 1.1.1):} Tiempos de respuesta críticos para la atención al ciudadano en ventanilla.
+    \begin{itemize}
+        \item \textit{Fuente / Evidencia:} Objetivos de agilidad y eficiencia derivados de la matriz de marco lógico.
+        \item \textit{Impacto:} Restringe el diseño de las bases de datos y la gestión de procesos en segundo plano; el sistema debe asegurar que las verificaciones documentales no generen cuellos de botella en las sedes físicas.
+        \item \textbf{Responsable:} Líder Técnico / Equipo Backend.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Supuestos}
+
+\begin{itemize}
+    \item \textbf{S-01 (ID EDT 1.1.2):} Las entidades externas (Centros de Reconocimiento de Conductores y Pasarelas de Pago Nacional) dispondrán de interfaces de conexión (APIs) documentadas y operativas durante la fase de desarrollo.
+    \begin{itemize}
+        \item \textit{Riesgo si no se cumple:} Retrasos críticos en la integración del software; imposibilidad de automatizar la conciliación de pagos o la verificación de aptitud médica, requiriendo intervención manual prolongada.
+        \item \textbf{Responsable:} Project Manager / Analista Funcional.
+    \end{itemize}
+
+    \item \textbf{S-02 (ID EDT 1.1.1):} Las sedes de la Secretaría de Tránsito a nivel nacional contarán con los recursos físicos mínimos indispensables, tales como conectividad a internet de banda ancha y suministro eléctrico estable.
+    \begin{itemize}
+        \item \textit{Riesgo si no se cumple:} El sistema basado en la nube no podrá cargar en las sedes afectadas, paralizando la expedición de licencias físicas y generando demoras masivas en la atención.
+        \item \textbf{Responsable:} Área de Infraestructura de la entidad cliente.
+    \end{itemize}
+
+    \item \textbf{S-03 (ID EDT 1.4.1):} El personal administrativo y los operadores de ventanilla estarán disponibles para asistir a las capacitaciones y participar en las pruebas piloto del software en las fechas acordadas en el cronograma.
+    \begin{itemize}
+        \item \textit{Riesgo si no se cumple:} Curva de aprendizaje deficiente, errores operativos en vivo, y retrasos en la firma de las actas de aceptación final del proyecto.
+        \item \textbf{Responsable:} Patrocinador del Proyecto / Supervisor de Ventanilla.
+    \end{itemize}
+\end{itemize}
