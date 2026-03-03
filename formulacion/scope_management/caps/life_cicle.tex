@@ -1,0 +1,128 @@
+
+El ciclo de vida del proyecto define cómo se organiza el trabajo desde su inicio hasta el cierre, 
+estableciendo las fases que producen entregables verificables y que sirven como base para 
+planificar el alcance, controlar cambios y validar resultados. La metodología de desarrollo de 
+software adoptada debe respetarlo, adaptándose internamente según la naturaleza del producto.
+
+\subsection{Ciclo de vida del proyecto}
+
+El proyecto seguirá el ciclo de vida estándar estructurado en cinco fases fundamentales, tal 
+como lo establece el marco de gestión de proyectos de referencia. Estas fases son universales 
+al tipo de proyecto y aplican independientemente de la metodología técnica de desarrollo de 
+software que se adopte internamente:
+
+\begin{itemize}
+    \item \textbf{Inicio:} Se formaliza la existencia del proyecto, se define el problema central 
+    (ineficiencia en el trámite de licencias de conducción a nivel nacional), se identifican los 
+    stakeholders principales y se establece la autorización para planificar. Esta fase produce el 
+    acta de constitución del proyecto y el registro inicial de interesados.
+
+    \item \textbf{Planificación:} Se elabora el Plan de Gestión del Alcance, incluyendo los entregables, exclusiones, restricciones, supuestos, la 
+    EDT/WBS y la línea base del proyecto. En esta fase se define qué se construirá, quién lo 
+    construirá y bajo qué condiciones. Esta fase puede refinarse progresivamente conforme 
+    avanza el conocimiento del proyecto.
+
+    \item \textbf{Ejecución:} Se construye el sistema de software mediante el desarrollo 
+    iterativo e incremental de sus módulos funcionales. El equipo implementa los diseños 
+    aprobados, gestiona integraciones externas y produce los 
+    incrementos verificables del producto.
+
+    \item \textbf{Monitoreo y Control:} A lo largo de todo el ciclo de vida se realiza seguimiento 
+    al avance, se controlan cambios al alcance mediante el proceso formal de control integrado 
+    de cambios y se validan los entregables producidos en cada iteración. Esta fase es 
+    transversal a todas las demás.
+
+    \item \textbf{Cierre:} Se formalizan las actas de aceptación de los entregables finales, se 
+    consolidan las lecciones aprendidas, se cierra el contrato con proveedores y se entrega 
+    oficialmente el sistema al cliente.
+\end{itemize}
+
+\subsection{Metodología de desarrollo de software}
+
+Dado que el alcance del sistema abarca múltiples módulos funcionales de alta complejidad 
+técnica (biometría, integración con registros nacionales, generación de licencias virtuales, 
+modo de contingencia, entre otros) y considerando que la magnitud de una implementación 
+nacional implica un refinamiento progresivo del alcance, se adopta una metodología 
+iterativa e incremental para el desarrollo de software.
+
+Esta elección se fundamenta en los principios del marco de gestión del proyecto, que reconoce 
+que el alcance puede refinarse a medida que se obtiene más información y que la validación de 
+entregables debe ocurrir de forma continua a lo largo del proyecto, no únicamente al final. Bajo 
+esta metodología:
+
+\begin{itemize}
+    \item El desarrollo se organiza en iteraciones de duración fija, cada una de las 
+    cuales produce un incremento funcional verificable del sistema.
+
+    \item Al inicio de cada iteración se planifican las funcionalidades a desarrollar, tomando 
+    como referencia los módulos definidos en la EDT/WBS y priorizando de mayor a menor 
+    impacto operativo para el ciudadano.
+
+    \item Al finalizar cada iteración, el incremento es presentado a los representantes del 
+    cliente para su validación formal, lo que genera una aceptación parcial documentada 
+    y permite incorporar retroalimentación en la siguiente iteración.
+
+    \item Los cambios solicitados por el cliente entre iteraciones son tramitados mediante el 
+    proceso formal de control de cambios, garantizando que no se afecte la línea base del 
+    alcance sin aprobación del comité directivo.
+\end{itemize}
+
+
+\subsection{Adaptaciones del ciclo de vida para el proyecto de software}
+
+A continuación, se documentan las adaptaciones al ciclo de vida estándar del proyecto, 
+justificadas desde los principios de elaboración progresiva del alcance, validación continua y 
+control integrado de cambios que establece el marco de gestión de referencia.
+
+\subsubsection{Adaptación A-01: División de la fase de ejecución en iteraciones}
+
+La fase de ejecución, en lugar de ejecutarse como un único bloque secuencial, se divide en 
+iteraciones de desarrollo. Cada iteración sigue internamente el ciclo análisis $\rightarrow$ diseño $\rightarrow$ desarrollo $\rightarrow$ pruebas, y produce un incremento funcional del sistema correspondiente a uno o varios módulos de la EDT/WBS.
+
+\begin{itemize}
+    \item \textit{Justificación:} El sistema contempla 14 módulos funcionales de diferente 
+    complejidad. Desarrollarlos en paralelo como un solo bloque elevaría el riesgo de entrega y 
+    dificultaría la detección temprana de fallas de integración, por ejemplo, entre el módulo 
+    de conciliación de pagos y las pasarelas nacionales.
+    \item \textit{Impacto en la gestión:} Cada iteración tiene su propio acta de entrega parcial 
+    y debe cumplir con los criterios de aceptación documentados en la sección correspondiente 
+    a los \textit{Entregables del producto} (ver Sección ~\ref{sec:Entregables del producto}).
+    \item \textit{Responsable de supervisión:} Project Manager en conjunto con el Analista 
+    Funcional.
+\end{itemize}
+
+\subsubsection{Adaptación A-02: Planificación progresiva del alcance}
+
+Al inicio de cada iteración, la planificación del alcance es refinada con base en la retroalimentación 
+obtenida en la iteración anterior. La EDT/WBS se trata como un documento vivo que 
+se actualiza progresivamente a medida que el equipo y el cliente profundizan en el entendimiento 
+del sistema.
+
+\begin{itemize}
+    \item \textit{Justificación:} En un proyecto de alcance nacional que incorpora licencias 
+    virtuales, un componente tecnológico relativamente nuevo en el contexto normativo colombiano, es previsible que ciertos detalles del alcance se aclaren durante la ejecución, 
+    especialmente los relacionados con los estándares de seguridad del documento virtual y los 
+    requisitos de interoperabilidad con el RUNT.
+    \item \textit{Impacto en la gestión:} Los cambios en la EDT requieren aprobación formal 
+    del comité directivo antes de ser incorporados; esto garantiza que la línea base del alcance 
+    no se modifique sin control.
+    \item \textit{Responsable de supervisión:} Project Manager.
+\end{itemize}
+
+\subsubsection{Adaptación A-03: Validación del alcance por iteración}
+
+Cada incremento funcional entregado al cliente es sometido a un proceso de validación 
+formal por iteración. Esta validación incluye una demostración funcional al representante del 
+cliente y la firma de un acta de aceptación parcial.
+
+\begin{itemize}
+    \item \textit{Justificación:} Dado que el sistema impacta directamente a ciudadanos que 
+    tramitan su primera licencia de conducción y a funcionarios públicos, es inaceptable 
+    descubrir errores funcionales críticos únicamente en la entrega final. La validación 
+    incremental reduce el riesgo de rechazo total del sistema en el cierre del proyecto.
+    \item \textit{Impacto en la gestión:} Las actas de aceptación parcial sirven como evidencia 
+    de verificación para los entregables documentados (ver Sección ~\ref{sec:Entregables del producto}) de este plan y 
+    constituyen insumos para el acta de cierre definitivo.
+    \item \textit{Responsable de supervisión:} Project Manager en conjunto con el 
+    representante del cliente (Secretaría de Tránsito / Ministerio de Transporte).
+\end{itemize}
