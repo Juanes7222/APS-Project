@@ -39,34 +39,19 @@ software que se adopte internamente:
 
 \subsection{Metodología de desarrollo de software}
 
-Dado que el alcance del sistema abarca múltiples módulos funcionales de alta complejidad 
-técnica (biometría, integración con registros nacionales, generación de licencias virtuales, 
-modo de contingencia, entre otros) y considerando que la magnitud de una implementación 
-nacional implica un refinamiento progresivo del alcance, se adopta una metodología 
-iterativa e incremental para el desarrollo de software.
+Para el desarrollo del sistema de trámites de licencias, se adopta el una metodología incremental. 
 
-Esta elección se fundamenta en los principios del marco de gestión del proyecto, que reconoce 
-que el alcance puede refinarse a medida que se obtiene más información y que la validación de 
-entregables debe ocurrir de forma continua a lo largo del proyecto, no únicamente al final. Bajo 
-esta metodología:
+La elección de esta metodología se fundamenta en que el sistema está compuesto por múltiples módulos funcionales independientes tales como gestión de turnos, conciliación de pagos e integración con el RUNT. En lugar de construir todo el sistema y entregarlo al final del proyecto, el modelo incremental permite que el software se construya mediante entregas parciales, donde cada incremento agrega nuevas funcionalidades al sistema y aporta valor inmediato a la entidad de tránsito.
+
+Esta metodología se integra con el marco general de gestión del proyecto, adaptando la ejecución bajo los siguientes principios:
 
 \begin{itemize}
-    \item El desarrollo se organiza en iteraciones de duración fija, cada una de las 
-    cuales produce un incremento funcional verificable del sistema.
-
-    \item Al inicio de cada iteración se planifican las funcionalidades a desarrollar, tomando 
-    como referencia los módulos definidos en la EDT/WBS y priorizando de mayor a menor 
-    impacto operativo para el ciudadano.
-
-    \item Al finalizar cada iteración, el incremento es presentado a los representantes del 
-    cliente para su validación formal, lo que genera una aceptación parcial documentada 
-    y permite incorporar retroalimentación en la siguiente iteración.
-
-    \item Los cambios solicitados por el cliente entre iteraciones son tramitados mediante el 
-    proceso formal de control de cambios, garantizando que no se afecte la línea base del 
-    alcance sin aprobación del comité directivo.
+    \item \textbf{Adaptación de las fases del proyecto:} Se mantiene la estructura principal del proyecto (inicio, planificación, ejecución, monitoreo y control y cierre). No obstante, la fase de ejecución no se realiza de forma lineal y absoluta, sino que se divide en ciclos de desarrollo más pequeños. Cada ciclo produce un nuevo incremento que se suma al sistema existente.
+    
+    \item \textbf{Nivel de detalle de los entregables:} Debido a la naturaleza de las integraciones con servicios externos, como biometría o pasarelas de pago, no todos los requisitos técnicos estarán completamente detallados desde el inicio. El modelo incremental permite que los entregables se definan de forma progresiva; el nivel de detalle de cada módulo se especifica justo antes de iniciar el incremento correspondiente.
+    
+    \item \textbf{Refinamiento progresivo del alcance:} A lo largo del proyecto, es habitual que el cliente cambie necesidades al ver prototipos o que se descubran nuevas restricciones técnicas. Al entregar el software por incrementos, el equipo puede ajustar o refinar el alcance de los módulos futuros en base a la retroalimentación obtenida de los módulos ya entregados.
 \end{itemize}
-
 
 \subsection{Adaptaciones del ciclo de vida para el proyecto de software}
 
