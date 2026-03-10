@@ -1,0 +1,54 @@
+
+El Protocolo de Entrega establece el conjunto de reglas, formatos y canales mediante los cuales los entregables definidos en la sección en la anterior entrega y la información del proyecto son comunicados, distribuidos, y validados formalmente con los interesados. Este protocolo se fundamenta en el Plan de Gestión de las Comunicaciones y busca garantizar que, de acuerdo al modelo emisor-receptor, cada incremento de software y documento sea recibido, comprendido y retroalimentado de manera controlada.
+
+Dado que el proyecto utiliza una metodología incremental, la comunicación de los entregables combina métodos interactivos (reuniones de demostración o \textit{Reviews}), comunicación \textit{push} (envío de actas por correo) y comunicación \textit{pull} (acceso a repositorios en la nube).
+
+A continuación, se presenta la matriz de protocolo de entrega para los principales entregables (módulos y artefactos) del sistema:
+
+\begin{table}[H]
+\centering
+\scriptsize 
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{3cm}|p{2cm}|p{2.5cm}|p{2cm}|p{2.5cm}|p{1.5cm}|p{1.8cm}|}
+\hline
+\rowcolor[HTML]{003366} 
+\textcolor{white}{\textbf{ENTREGABLE}} & 
+\textcolor{white}{\textbf{FORMATO}} & 
+\textcolor{white}{\textbf{RESPONSABLE DE COMUNICAR}} & 
+\textcolor{white}{\textbf{RECEPTOR}} & 
+\textcolor{white}{\textbf{CANAL DE COMUNICACION}} & 
+\textcolor{white}{\textbf{FECHA ENTREGA}} & 
+\textcolor{white}{\textbf{FECHA LIMITE DE OBSERVACIONES}} \\ \hline
+
+Artefactos de Gestión del Alcance y Cierre & Documento PDF (Firma digital) & Project Manager & Patrocinador / Comité Directivo & Correo electrónico y Reunión formal & Semana 2 & 3 días hábiles \\ \hline
+
+Documentación Técnica, Diseño y Capacitación & Documentos, diagramas y Wiki & Analista Funcional & Equipo de TI y Soporte N1 & Repositorio documental (Pull) & Previo a cada Sprint & 5 días hábiles \\ \hline
+
+Módulo de gestión de llegada y turnos & Incremento de Software (URL QA) & Equipo de Desarrollo & Secretarías de Tránsito & Reunión de demostración (Videoconferencia) & Fin Sprint 1 & 3 días hábiles \\ \hline
+
+Módulo de verificación documental & Incremento de Software (URL QA) & Desarrollador Backend & Operadores de ventanilla & Reunión de demostración (Interactiva) & Fin Sprint 2 & 3 días hábiles \\ \hline
+
+Módulo de conciliación de pagos & Incremento de Software y docs API & Desarrollador Backend & Área Financiera / Tesorería & Reunión y envío de pruebas por correo & Fin Sprint 3 & 5 días hábiles \\ \hline
+
+Módulo de validación de aptitud médica e Integración con RUNT (Contingencia) & Incremento de Software y Logs de prueba & Coordinador Técnico de Integraciones & Ministerio de Transporte / RUNT & Reunión técnica y Repositorio de código & Fin Sprint 4 & 5 días hábiles \\ \hline
+
+Módulo de verificación biométrica & Incremento de Software & Analista QA / Especialista Seguridad & Supervisores de ventanilla / SIC & Demostración en sitio y reporte PDF & Fin Sprint 5 & 3 días hábiles \\ \hline
+
+Módulo de generación, impresión y Emisión Virtual & Incremento de Software & Desarrollador Backend & Patrocinador y Proveedor de impresión & Reunión de demostración y actas & Fin Sprint 6 & 5 días hábiles \\ \hline
+
+Módulo de portal ciudadano, notificaciones y excepciones & Prototipo y Software (URL QA) & Desarrollador Frontend & Patrocinador / Ciudadanos piloto & Portal web y focus group & Fin Sprint 7 & 5 días hábiles \\ \hline
+
+Módulos transversales (Usuarios, auditoría, retención) & Reportes y Scripts BD & Administrador BD / DevOps & Área de TI y Auditoría & Correo electrónico y repositorio & Fin Sprint 8 & 3 días hábiles \\ \hline
+
+Sistema Nacional Integral de Trámites (Entregable Final) & Despliegue en Producción (Release) & Líder Técnico / Project Manager & Todos los Stakeholders & Reunión general de cierre y Acta formal & Cierre del Proyecto & 10 días hábiles \\ \hline
+
+\end{tabular}
+\end{table}
+
+\subsubsection*{Consideraciones del protocolo de seguimiento}
+\begin{itemize}
+    \item \textbf{Confirmación de recepción:} Todo envío de información vía correo electrónico (comunicación \textit{push}) requiere un acuse de recibo explícito por parte del receptor en un plazo máximo de 24 horas, garantizando el modelo emisor-receptor.
+    \item \textbf{Gestión de observaciones:} Si el receptor no emite observaciones o rechazos formales dentro de la \textit{Fecha límite de observaciones} establecida en la matriz, el entregable o incremento se considerará automáticamente \textbf{Aceptado por silencio administrativo}. Esto es vital en el modelo incremental para permitir al equipo avanzar con el siguiente módulo sin afectar el cronograma.
+    \item \textbf{Escalamiento:} Cualquier incidente relacionado con la falta de retroalimentación o no disponibilidad de los receptores para las reuniones interactivas (\textit{Reviews}) será registrado y escalado por el Project Manager al Comité Directivo.
+\end{itemize}
