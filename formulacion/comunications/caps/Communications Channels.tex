@@ -1,40 +1,53 @@
 Los canales de comunicación del proyecto definen los mecanismos mediante los cuales los miembros del equipo y los diferentes interesados intercambian información durante el ciclo de vida del desarrollo del software. Estos canales se establecen en coherencia con el Protocolo de Entrega definido en la sección 10.2, el cual combina comunicación interactiva, comunicación \textit{push} y comunicación \textit{pull} para la distribución y validación de los entregables del proyecto.
 
+Dado que el proyecto adopta una metodología ágil incremental basada en Scrum, la estructura de comunicación se organiza alrededor de roles específicos que permiten coordinar la gestión del proyecto, el desarrollo del software y la supervisión por parte del cliente.
+
 \textbf{Equipo de Dirección del Proyecto}
+
 \begin{itemize}
-\item Project Manager
-\item Líder Técnico
-\item Patrocinador del proyecto
-\item Comité Directivo
+\item Project Manager (Director del Proyecto)
+\item Scrum Master
+\item Product Owner
+\item Arquitecto de Software
+\item Líder Técnico de Desarrollo
 \end{itemize}
 
 Este equipo es responsable de la toma de decisiones estratégicas, la validación de entregables clave y el escalamiento de incidentes que puedan afectar el avance del proyecto.
 
 \textbf{Equipo de Desarrollo}
+
 \begin{itemize}
 \item Desarrollador Backend
 \item Desarrollador Frontend
-\item Analista QA
-\item Administrador de Base de Datos / DevOps
+\item Ingeniero de Integraciones
+\item Analista QA (Quality Assurance)
+\item Administrador de Base de Datos (DBA)
+\item Especialista DevOps e infraestructura
+\item Especialista en Seguridad de la Información
 \end{itemize}
 
 Este equipo mantiene la comunicación técnica relacionada con el desarrollo del sistema, la implementación de módulos, el control del repositorio y la resolución de incidencias técnicas.
 
 \textbf{Equipo Operativo del Cliente}
+
 \begin{itemize}
-\item Operadores de ventanilla
-\item Supervisores de tránsito
-\item Área financiera / tesorería
+\item Director del Proyecto del Cliente
+\item Líder del Equipo Operativo
+\item Supervisor del Proyecto
+\item Operadores de Ventanilla
+\item Supervisores de Tránsito
+\item Área Financiera / Tesorería
 \item Área de TI institucional
 \end{itemize}
 
 Este grupo participa principalmente en la validación funcional de los incrementos de software durante las revisiones de sprint y en la retroalimentación sobre el funcionamiento del sistema.
 
 \textbf{Entidades Externas}
+
 \begin{itemize}
 \item Ministerio de Transporte
 \item RUNT
-\item Proveedor de impresión
+\item Proveedor de Impresión
 \item Entidades regulatorias
 \end{itemize}
 
@@ -42,32 +55,59 @@ Estas entidades participan en procesos de validación técnica, integración del
 
 \subsubsection{Reuniones Tecnicas periódicas}
 
+Para garantizar una comunicación efectiva entre los diferentes actores del proyecto se establecen reuniones periódicas dentro de los equipos de trabajo y entre los líderes de los distintos grupos involucrados.
+
 \begin{itemize}
 
-\item \textbf{Reunión de planificación del Sprint} \\
+\item \textbf{Reunión de planificación del Sprint (Sprint Planning)} \\
 Frecuencia: inicio de cada sprint. \\
-Participantes: Project Manager y equipo de desarrollo. \\
-Objetivo: definir las tareas y entregables del sprint.
+Participantes: Product Owner, Scrum Master, Project Manager, Líder Técnico de Desarrollo y equipo de desarrollo. \\
+Objetivo: definir las funcionalidades y tareas que serán desarrolladas durante el sprint.
 
-\item \textbf{Reunión de seguimiento} \\
+\item \textbf{Reunión diaria del equipo de desarrollo (Daily Scrum)} \\
+Frecuencia: diaria. \\
+Participantes: Scrum Master y equipo de desarrollo. \\
+Objetivo: revisar el progreso del trabajo, identificar impedimentos y coordinar las actividades del día.
+
+\item \textbf{Reunión interna del equipo de desarrollo} \\
 Frecuencia: semanal. \\
-Participantes: equipo de desarrollo y Project Manager. \\
-Objetivo: revisar el progreso del proyecto, identificar bloqueos y coordinar actividades.
+Participantes: Líder Técnico de Desarrollo, desarrolladores, QA y especialistas técnicos. \\
+Objetivo: revisar avances técnicos, resolver problemas de implementación y coordinar tareas entre los desarrolladores.
 
-\item \textbf{Reunión de demostración (Sprint Review)} \\
-Frecuencia: al finalizar cada sprint. \\
-Participantes: equipo de desarrollo, patrocinador y usuarios clave. \\
-Objetivo: presentar el incremento de software desarrollado y recibir retroalimentación.
+\item \textbf{Reunión de coordinación entre líderes del proyecto} \\
+Frecuencia: semanal. \\
+Participantes: Project Manager, Product Owner, Scrum Master, Arquitecto de Software y Líder Técnico de Desarrollo. \\
+Objetivo: evaluar el estado general del proyecto, coordinar decisiones estratégicas y gestionar riesgos.
 
-\item \textbf{Reuniones técnicas de integración} \\
+\item \textbf{Reunión de coordinación entre desarrollo y cliente} \\
+Frecuencia: semanal. \\
+Participantes: Líder Técnico de Desarrollo y Líder del Equipo Operativo del Cliente. \\
+Objetivo: revisar el estado de los módulos en desarrollo, resolver dudas funcionales del sistema y coordinar validaciones operativas.
+
+\item \textbf{Reunión técnica de integración} \\
 Frecuencia: según necesidad. \\
-Participantes: equipo técnico e integradores externos. \\
-Objetivo: validar integraciones tecnológicas y resolver problemas técnicos.
+Participantes: Arquitecto de Software, Ingeniero de Integraciones, Líder Técnico de Desarrollo y especialistas técnicos. \\
+Objetivo: coordinar las integraciones con sistemas externos como RUNT, pasarelas de pago u otros servicios institucionales.
+
+\item \textbf{Revisión de Sprint (Sprint Review)} \\
+Frecuencia: al finalizar cada sprint. \\
+Participantes: equipo de desarrollo, Product Owner, cliente y stakeholders del proyecto. \\
+Objetivo: presentar el incremento funcional del sistema y recibir retroalimentación del cliente.
+
+\item \textbf{Retrospectiva del Sprint (Sprint Retrospective)} \\
+Frecuencia: al finalizar cada sprint. \\
+Participantes: Scrum Master y equipo de desarrollo. \\
+Objetivo: evaluar el proceso de trabajo del sprint e identificar mejoras para el siguiente ciclo.
+
+\item \textbf{Reunión operativa del cliente} \\
+Frecuencia: según necesidad. \\
+Participantes: Líder del Equipo Operativo, supervisores de tránsito y operadores de ventanilla. \\
+Objetivo: discutir aspectos operativos del sistema y recopilar observaciones de los usuarios finales.
 
 \item \textbf{Reunión de cierre del proyecto} \\
 Frecuencia: al finalizar el proyecto. \\
 Participantes: todos los stakeholders principales. \\
-Objetivo: presentar el sistema final y formalizar la entrega del proyecto.
+Objetivo: presentar el sistema final, validar los resultados del proyecto y formalizar la entrega.
 
 \end{itemize}
 
@@ -87,6 +127,7 @@ Aunque el proyecto utiliza principalmente medios digitales, se contemplan alguno
 Estos canales constituyen los principales mecanismos de comunicación operativa del proyecto y permiten mantener la coordinación entre los equipos durante el desarrollo del software.
 
 \textbf{Correo electrónico}
+
 De acuerdo con el protocolo del proyecto, todo correo enviado requiere confirmación de recepción por parte del destinatario en un plazo máximo de 24 horas.
 
 Se utilizará principalmente para:
@@ -98,37 +139,35 @@ Se utilizará principalmente para:
 \item Recepción de observaciones de los interesados.
 \end{itemize}
 
-
+Para la gestión del correo institucional del proyecto se utilizará la plataforma Gmail, permitiendo mantener registro y trazabilidad de todas las comunicaciones formales del proyecto.
 
 \textbf{Videollamadas}
 
-Se utilizan para reuniones interactivas del proyecto, especialmente para:
+Las reuniones virtuales del proyecto se realizarán principalmente mediante la plataforma Google Meet para:
 
 \begin{itemize}
-\item demostraciones de módulos desarrollados,
-\item revisiones de sprint,
-\item reuniones técnicas con integradores externos,
-\item reuniones del comité directivo.
+\item reuniones de planificación
+\item revisiones de sprint
+\item demostraciones del sistema
+\item reuniones con el cliente
 \end{itemize}
 
 \textbf{Llamadas telefónicas}
 
-Las llamadas telefónicas se utilizan principalmente para la coordinación inmediata entre miembros del equipo y para la resolución de incidentes urgentes que puedan afectar el desarrollo del proyecto.
+Las llamadas telefónicas se utilizan principalmente para la coordinación inmediata entre miembros del equipo y para la resolución de incidentes urgentes.
+
+También se utilizará mensajería instantánea mediante WhatsApp para la coordinación diaria del equipo y el intercambio rápido de información.
 
 \textbf{Repositorios en la nube}
 
-Para facilitar la colaboración entre los miembros del equipo y garantizar la disponibilidad permanente de la información del proyecto, se utilizarán herramientas de almacenamiento y gestión de repositorios en la nube. Estas plataformas permitirán centralizar los artefactos del proyecto y asegurar que todos los interesados puedan acceder a la versión más actualizada de la documentación y del software.
-
-Esto facilita la coordinación entre los diferentes roles del proyecto y evita la duplicación o pérdida de información.
-
-Dentro de este entorno se almacenarán y gestionarán los siguientes elementos del proyecto:
+Para facilitar la colaboración entre los miembros del equipo y garantizar la disponibilidad permanente de la información del proyecto se utilizarán plataformas de almacenamiento y repositorios en la nube.
 
 \begin{itemize}
-\item Código fuente del sistema y control de versiones del software.
-\item Documentación técnica del proyecto (arquitectura, diagramas y especificaciones).
-\item Artefactos de diseño y modelos del sistema.
+\item Código fuente del sistema mediante GitHub.
+\item Documentación técnica del proyecto almacenada en Google Drive.
+\item Diagramas y modelos del sistema.
 \item Manuales técnicos y material de capacitación.
-\item Registros de pruebas, reportes de errores y documentación de despliegue.
+\item Registros de pruebas y reportes de errores.
 \end{itemize}
 
 El uso de estas herramientas permite que el equipo de desarrollo trabaje de manera colaborativa, manteniendo trazabilidad de los cambios realizados en el proyecto y facilitando la integración continua de los diferentes módulos del sistema.
