@@ -39,75 +39,47 @@ software que se adopte internamente:
 
 \subsection{Metodología de desarrollo de software}
 
-Para el desarrollo del sistema de trámites de licencias, se adopta el una metodología incremental. 
+Para el desarrollo del sistema de trámites de licencias, se adopta una metodología ágil incremental basada en el marco de trabajo Scrum. 
 
-La elección de esta metodología se fundamenta en que el sistema está compuesto por múltiples módulos funcionales independientes tales como gestión de turnos, conciliación de pagos e integración con el RUNT. En lugar de construir todo el sistema y entregarlo al final del proyecto, el modelo incremental permite que el software se construya mediante entregas parciales, donde cada incremento agrega nuevas funcionalidades al sistema y aporta valor inmediato a la entidad de tránsito.
+La elección de esta metodología se fundamenta en que el sistema está compuesto por múltiples módulos funcionales independientes. En lugar de utilizar un enfoque tradicional (cascada) que entrega todo al final, Scrum permite construir el software mediante entregas parciales (incrementos), aportando valor continuo a la entidad de tránsito y permitiendo la adaptación ante posibles cambios en integraciones complejas (como RUNT o pasarelas de pago).
 
-Esta metodología se integra con el marco general de gestión del proyecto, adaptando la ejecución bajo los siguientes principios:
+Para que esta metodología deje de ser un concepto general y se aplique operativamente al desarrollo, se define la siguiente estructura de trabajo:
 
 \begin{itemize}
-    \item \textbf{Adaptación de las fases del proyecto:} Se mantiene la estructura principal del proyecto (inicio, planificación, ejecución, monitoreo y control y cierre). No obstante, la fase de ejecución no se realiza de forma lineal y absoluta, sino que se divide en ciclos de desarrollo más pequeños. Cada ciclo produce un nuevo incremento que se suma al sistema existente.
+    \item \textbf{Ciclos de trabajo (Sprints):} La fase de ejecución se divide en iteraciones de tiempo fijo (Sprints de 2 a 4 semanas). En cada Sprint, el equipo aborda un conjunto específico de requisitos de la EDT (por ejemplo, el módulo de turnos) y ejecuta su análisis, diseño, codificación y pruebas, dando como resultado un incremento de software 100\% funcional.
     
-    \item \textbf{Nivel de detalle de los entregables:} Debido a la naturaleza de las integraciones con servicios externos, como biometría o pasarelas de pago, no todos los requisitos técnicos estarán completamente detallados desde el inicio. El modelo incremental permite que los entregables se definan de forma progresiva; el nivel de detalle de cada módulo se especifica justo antes de iniciar el incremento correspondiente.
+    \item \textbf{Roles de la metodología:} La ejecución técnica estará liderada por perfiles ágiles integrados en la estructura organizacional:
+    \begin{itemize}
+        \item \textit{Product Owner:} Representado por el Analista Funcional en coordinación con el Director de Proyecto del Cliente (Ministerio de Transporte). Son los encargados de priorizar qué se desarrolla primero.
+        \item \textit{Scrum Master / Project Manager:} Encargado de liderar la metodología, eliminar bloqueos e integrar áreas transversales (Infraestructura, Seguridad).
+        \item \textit{Equipo de Desarrollo:} Compuesto por Arquitecto de Software, desarrolladores (Front/Back), QA y DevOps.
+    \end{itemize}
     
-    \item \textbf{Refinamiento progresivo del alcance:} A lo largo del proyecto, es habitual que el cliente cambie necesidades al ver prototipos o que se descubran nuevas restricciones técnicas. Al entregar el software por incrementos, el equipo puede ajustar o refinar el alcance de los módulos futuros en base a la retroalimentación obtenida de los módulos ya entregados.
+    \item \textbf{Ceremonias (Eventos de validación):} El trabajo incremental se controla mediante reuniones formales. Diariamente el equipo operativo realiza una Daily Scrum para sincronizar tareas. Al final de cada Sprint, se ejecuta una Sprint Review junto a los directivos y supervisores del cliente para validar y aceptar el módulo entregado.
 \end{itemize}
 
 \subsection{Adaptaciones del ciclo de vida para el proyecto de software}
 
-A continuación, se documentan las adaptaciones al ciclo de vida estándar del proyecto, 
-justificadas desde los principios de elaboración progresiva del alcance, validación continua y 
-control integrado de cambios que establece el marco de gestión de referencia.
+Dado que el marco general de gestión del proyecto exige control y validación de entregables, Scrum se adapta al ciclo de vida del proyecto bajo los siguientes principios:
 
-\subsubsection{Adaptación A-01: División de la fase de ejecución en iteraciones}
-
-La fase de ejecución, en lugar de ejecutarse como un único bloque secuencial, se divide en 
-iteraciones de desarrollo. Cada iteración sigue internamente el ciclo análisis $\rightarrow$ diseño $\rightarrow$ desarrollo $\rightarrow$ pruebas, y produce un incremento funcional del sistema correspondiente a uno o varios módulos de la EDT/WBS.
-
+\subsubsection{Adaptación A-01: División de la fase de ejecución en Sprints}
+La fase de ejecución tradicional se adapta para no ser un bloque secuencial único. En su lugar, el sistema se desarrolla iterativamente. 
 \begin{itemize}
-    \item \textit{Justificación:} El sistema contempla 14 módulos funcionales de diferente 
-    complejidad. Desarrollarlos en paralelo como un solo bloque elevaría el riesgo de entrega y 
-    dificultaría la detección temprana de fallas de integración, por ejemplo, entre el módulo 
-    de conciliación de pagos y las pasarelas nacionales.
-    \item \textit{Impacto en la gestión:} Cada iteración tiene su propio acta de entrega parcial 
-    y debe cumplir con los criterios de aceptación documentados en la sección correspondiente 
-    a los \textit{Entregables del producto} (ver Sección ~\ref{sec:Entregables del producto}).
-    \item \textit{Responsable de supervisión:} Project Manager en conjunto con el Analista 
-    Funcional.
+    \item \textit{Impacto en la gestión:} Desarrollar por Sprints mitiga el riesgo técnico de las fallas de integración. Cada Sprint tiene su propia acta de entrega parcial y debe cumplir con los criterios de aceptación documentados (ver Sección \ref{sec:Entregables del producto}).
+    \item \textit{Responsable:} Project Manager / Scrum Master.
 \end{itemize}
 
-\subsubsection{Adaptación A-02: Planificación progresiva del alcance}
-
-Al inicio de cada iteración, la planificación del alcance es refinada con base en la retroalimentación 
-obtenida en la iteración anterior. La EDT/WBS se trata como un documento vivo que 
-se actualiza progresivamente a medida que el equipo y el cliente profundizan en el entendimiento 
-del sistema.
-
+\subsubsection{Adaptación A-02: Planificación progresiva (Gestión del Backlog)}
+La EDT/WBS se trata como un documento vivo (Product Backlog). Al inicio de cada Sprint, la planificación del alcance se refina progresivamente.
 \begin{itemize}
-    \item \textit{Justificación:} En un proyecto de alcance nacional que incorpora licencias 
-    virtuales, un componente tecnológico relativamente nuevo en el contexto normativo colombiano, es previsible que ciertos detalles del alcance se aclaren durante la ejecución, 
-    especialmente los relacionados con los estándares de seguridad del documento virtual y los 
-    requisitos de interoperabilidad con el RUNT.
-    \item \textit{Impacto en la gestión:} Los cambios en la EDT requieren aprobación formal 
-    del comité directivo antes de ser incorporados; esto garantiza que la línea base del alcance 
-    no se modifique sin control.
-    \item \textit{Responsable de supervisión:} Project Manager.
+    \item \textit{Impacto en la gestión:} Debido a la naturaleza normativa de las licencias virtuales y biometría, es normal que los detalles técnicos se aclaren durante el desarrollo. Sin embargo, cualquier modificación que afecte la línea base del proyecto debe pasar por un proceso formal de control de cambios.
+    \item \textit{Responsable:} Product Owner / Analista Funcional.
 \end{itemize}
 
-\subsubsection{Adaptación A-03: Validación del alcance por iteración}
-
-Cada incremento funcional entregado al cliente es sometido a un proceso de validación 
-formal por iteración. Esta validación incluye una demostración funcional al representante del 
-cliente y la firma de un acta de aceptación parcial.
-
+\subsubsection{Adaptación A-03: Validación del alcance por Incremento}
+En lugar de una única validación al final del proyecto, cada incremento funcional producido en un Sprint es sometido a un proceso de validación formal en la Sprint Review.
 \begin{itemize}
-    \item \textit{Justificación:} Dado que el sistema impacta directamente a ciudadanos que 
-    tramitan su primera licencia de conducción y a funcionarios públicos, es inaceptable 
-    descubrir errores funcionales críticos únicamente en la entrega final. La validación 
-    incremental reduce el riesgo de rechazo total del sistema en el cierre del proyecto.
-    \item \textit{Impacto en la gestión:} Las actas de aceptación parcial sirven como evidencia 
-    de verificación para los entregables documentados (ver Sección ~\ref{sec:Entregables del producto}) de este plan y 
-    constituyen insumos para el acta de cierre definitivo.
-    \item \textit{Responsable de supervisión:} Project Manager en conjunto con el 
-    representante del cliente (Secretaría de Tránsito / Ministerio de Transporte).
+    \item \textit{Impacto en la gestión:} Esta demostración funcional permite al representante del cliente aprobar los módulos entregados. Las actas de aceptación parcial de cada Sprint sirven como insumos obligatorios para el acta de cierre definitivo del proyecto.
+    \item \textit{Responsable:} Project Manager junto al Director de Proyecto del Cliente.
 \end{itemize}
+
