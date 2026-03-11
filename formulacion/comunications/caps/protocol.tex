@@ -1,18 +1,18 @@
 
 El Protocolo de Entrega establece el conjunto de reglas, formatos, tecnologías y canales mediante los cuales los entregables y la información del proyecto son comunicados, distribuidos y validados formalmente con los interesados. 
 
-Dado que el proyecto adopta un \textbf{modelo incremental} (con fases de ejecución divididas en iteraciones, según la Adaptación A-01), es indispensable definir claramente la estructura de comunicación para la entrega y validación de cada incremento funcional, involucrando tanto a la entidad cliente (Ministerio de Transporte y Secretarías de Tránsito) como al equipo de desarrollo.
+Dado que el proyecto adopta una metodología incremental ágil (Scrum) con fases de ejecución divididas en Sprints, es indispensable definir claramente la estructura de comunicación para la entrega y validación de cada incremento funcional, involucrando tanto a la entidad cliente (Ministerio de Transporte y Secretarías de Tránsito) como al equipo de desarrollo.
 
 \subsection{Estructura de Comunicaciones y Roles}
 
 Para garantizar el éxito de las entregas parciales y la planificación progresiva del alcance, se define la siguiente estructura de comunicación a tres niveles:
 
 \begin{itemize}
-    \item \textbf{Nivel Directivo y de Aprobación (Cierre de Iteración):} 
+    \item \textbf{Nivel Directivo y de Aprobación (Cierre de Sprint):} 
     \begin{itemize}
         \item \textit{Por parte del cliente:} Director de Proyecto (Ministerio-Secretaría), Supervisor del Contrato y Asesores Técnicos.
-        \item \textit{Por parte del equipo de desarrollo:} Project Manager y Líder Técnico.
-        \item \textit{Canal/Evento:} Reunión de demostración funcional por videoconferencia. En este espacio se ejecuta la validación formal del incremento y se firman las actas de aceptación parcial.
+        \item \textit{Por parte del equipo de desarrollo:} Project Manager / Scrum Master y Líder Técnico.
+        \item \textit{Canal/Evento:} \textbf{Sprint Review} (Reunión de demostración funcional) por videoconferencia. En este espacio se ejecuta la validación formal del incremento y se firman las actas de aceptación parcial.
     \end{itemize}
     
     \item \textbf{Nivel Táctico e Infraestructura (Quincenal o por demanda):}
@@ -24,8 +24,8 @@ Para garantizar el éxito de las entregas parciales y la planificación progresi
     
     \item \textbf{Nivel Operativo de Desarrollo (Diario):}
     \begin{itemize}
-        \item \textit{Roles:} Project Manager, Analista Funcional y Equipo de Desarrollo (Frontend, Backend, QA Tester).
-        \item \textit{Canal/Evento:} Reunión operativa diaria de seguimiento. Control de las fases internas de la iteración (análisis $\rightarrow$ diseño $\rightarrow$ desarrollo $\rightarrow$ pruebas) mediante tableros de gestión ágil y repositorios en GitHub.
+        \item \textit{Roles:} Scrum Master (Project Manager), Product Owner (Analista Funcional) y Equipo de Desarrollo (Frontend, Backend, QA Tester).
+        \item \textit{Canal/Evento:} \textbf{Daily Scrum} (Reunión operativa diaria). Control de las tareas del Sprint mediante tableros de gestión ágil (Jira/Trello) y repositorios en GitHub.
     \end{itemize}
 \end{itemize}
 
@@ -52,17 +52,17 @@ A continuación, se presenta la matriz de protocolo para los entregables definid
 
 Artefactos de Gestión del Alcance y Cierre & PDF firmado (Adobe Sign) en Google Drive & Project Manager & Director de Proyecto (Cliente) y Supervisor & Correo formal y Reunión por Microsoft Teams & Semana 2 & 3 días hábiles \\ \hline
 
-Documentación Técnica, Diseño y Arquitectura & Documentos LaTeX en PDF, alojados en Google Drive & Arquitecto de Software / Analista Funcional & Equipo de TI y Asesores del cliente & Enlace compartido por correo institucional & Previo a iteración & 5 días hábiles \\ \hline
+Documentación Técnica, Diseño y Arquitectura & Documentos LaTeX en PDF, alojados en Google Drive & Arquitecto de Software / Analista Funcional & Equipo de TI y Asesores del cliente & Enlace compartido por correo institucional & Previo a Sprint & 5 días hábiles \\ \hline
 
-Módulo de gestión de llegada y turnos & Código (GitHub) y URL en ambiente QA & Equipo de Desarrollo Frontend / Backend & Director Operativo y Supervisores de sede & Demostración funcional (Meet) & Fin Iteración 1 & 3 días hábiles \\ \hline
+Módulo de gestión de llegada y turnos & Código (GitHub) y URL en ambiente QA & Equipo de Desarrollo Frontend / Backend & Director Operativo y Supervisores de sede & Sprint Review (Meet) & Fin Sprint 1 & 3 días hábiles \\ \hline
 
-Módulo de verificación documental & Código (GitHub) y URL en ambiente QA & Desarrollador Backend & Operadores y Supervisor de ventanilla & Demostración funcional (Meet) & Fin Iteración 2 & 3 días hábiles \\ \hline
+Módulo de verificación documental & Código (GitHub) y URL en ambiente QA & Desarrollador Backend & Operadores y Supervisor de ventanilla & Sprint Review (Meet) & Fin Sprint 2 & 3 días hábiles \\ \hline
 
-Módulo de conciliación de pagos & Ejecutable y Docs de API (Swagger) & Desarrollador Backend / QA & Área Financiera y Tesorería & URL QA y envío de pruebas vía correo & Fin Iteración 3 & 5 días hábiles \\ \hline
+Módulo de conciliación de pagos & Ejecutable y Docs de API (Swagger) & Desarrollador Backend / QA & Área Financiera y Tesorería & URL QA y envío de pruebas vía correo & Fin Sprint 3 & 5 días hábiles \\ \hline
 
-Módulo de aptitud médica e Integración RUNT & Incremento y Logs de auditoría (CSV) & Coordinador Técnico de Integraciones & Directores de TI (Ministerio de Transporte) & GitHub y Grupo Técnico (WhatsApp/Slack) & Fin Iteración 4 & 5 días hábiles \\ \hline
+Módulo de aptitud médica e Integración RUNT & Incremento y Logs de auditoría (CSV) & Coordinador Técnico de Integraciones & Directores de TI (Ministerio de Transporte) & GitHub y Grupo Técnico (WhatsApp/Slack) & Fin Sprint 4 & 5 días hábiles \\ \hline
 
-Módulo de verificación biométrica & Ejecutable y Reporte de Vulnerabilidades & Analista QA / Especialista en Seguridad & Supervisores de ventanilla / SIC & Demostración presencial y PDF formal & Fin Iteración 5 & 3 días hábiles \\ \hline
+Módulo de verificación biométrica & Ejecutable y Reporte de Vulnerabilidades & Analista QA / Especialista en Seguridad & Supervisores de ventanilla / SIC & Demostración presencial y PDF formal & Fin Sprint 5 & 3 días hábiles \\ \hline
 
 Sistema Nacional Integral (Release Final) & Despliegue en Producción (Cloud) & Líder Técnico / DevOps (Infraestructura) & Director de Proyecto y Supervisor (Cliente) & Acta de Cierre enviada por correo oficial & Cierre del Proyecto & 10 días hábiles \\ \hline
 
@@ -74,6 +74,6 @@ Manuales de Usuario y Capacitación & PDF en Drive y Videos en YouTube (Ocultos)
 \subsection*{Consideraciones tecnológicas del protocolo}
 \begin{itemize}
     \item \textbf{Control de Versiones y Código:} Todos los incrementos funcionales de software se almacenarán y versionarán obligatoriamente en \textbf{GitHub}.
-    \item \textbf{Documentación y Actas:} Se utilizará una carpeta compartida en \textbf{Google Drive} con permisos de lectura-escritura controlados para gestionar el ``documento vivo'' de la EDT, actas de reunión y manuales.
-    \item \textbf{Gestión de incidentes rápidos:} Se autoriza el uso de herramientas de mensajería instantánea exclusivamente para coordinación operativa. Cualquier decisión que afecte la línea base del alcance requiere aprobación formal documentada.
+    \item \textbf{Documentación y Actas:} Se utilizará una carpeta compartida en \textbf{Google Drive} con permisos de lectura-escritura controlados para gestionar el Product Backlog (EDT), actas de Sprint Review y manuales.
+    \item \textbf{Gestión de incidentes rápidos:} Se autoriza el uso de herramientas de mensajería instantánea (WhatsApp y Slack) exclusivamente para coordinación operativa. Cualquier decisión que afecte la línea base del alcance requiere aprobación formal documentada.
 \end{itemize}
