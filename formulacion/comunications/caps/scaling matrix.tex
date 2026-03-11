@@ -1,11 +1,11 @@
-La matriz de escalamiento es utilizada para definir cómo se deben comunicar los involucrados del proyecto según el tipo de comunicación que se requiera transmitir y el rol de los mismos. Este proceso asegura que los incidentes que no puedan resolverse a un nivel inferior sean gestionados de manera oportuna por la cadena de mando adecuada.
+La matriz de escalamiento se utiliza para definir cómo deben comunicarse los involucrados del proyecto según el tipo de comunicación requerida y su rol, asegurando que los impedimentos técnicos o de gestión sean resueltos por la cadena de mando adecuada cuando superan la autonomía del equipo de desarrollo. Bajo el marco Scrum, este proceso facilita la fluidez de los incrementos funcionales.
 
 \begin{table}[H]
 \centering
 \scriptsize 
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|p{3cm}|p{3.5cm}|p{4cm}|p{3.5cm}|}
+\begin{tabular}{|p{2.8cm}|p{3.5cm}|p{4.2cm}|p{3.5cm}|}
 \hline
 \rowcolor[HTML]{003366} 
 \textcolor{white}{\textbf{NIVEL DE ESCALAMIENTO}} & 
@@ -13,23 +13,23 @@ La matriz de escalamiento es utilizada para definir cómo se deben comunicar los
 \textcolor{white}{\textbf{NOMBRE}} & 
 \textcolor{white}{\textbf{ROL}} \\ \hline
 
-\textbf{Nivel 1: Técnico} & Comunicación Interactiva (Mensajería instantánea, discusiones ad hoc) & [Jhoan Esteban Corrales] & Líder de Desarrollo / Coordinador Técnico \\ \hline
+\textbf{Nivel 1: Técnico} & Comunicación Interna (Daily Scrum, canales de desarrollo) & Juan Camilo Velásquez Tobo / Jhoan Esteban Corrales & Desarrolladores (Frontend / Backend) \\ \hline
 
-\textbf{Nivel 2: Operativo} & Comunicación Formal (Informes, correos electrónicos de seguimiento)  & [Juan Camilo Velasquez Tobo] & Analista Funcional / Especialista de Seguridad \\ \hline
+\textbf{Nivel 2: Especialidades} & Comunicación Técnica Formal (Informes de seguridad, networking y DB) & Juan Esteban Cardona & Especialista en Infraestructura, Seguridad y DBA \\ \hline
 
-\textbf{Nivel 3: Gestión} & Gestión de expectativas y resolución de conflictos en reuniones & [Jorge Luis Araque] & Project Manager (Director del Proyecto) \\ \hline
+\textbf{Nivel 3: Gestión} & Gestión de Impedimentos (Reuniones de coordinación y retrospectivas) & Jorge Araque & Project Manager / Scrum Master \\ \hline
 
-\textbf{Nivel 4: Estratégico} & Comunicación Oficial (Actas de comité, informes anuales) & [Julio César Lopez] & Patrocinador / Comité Directivo \\ \hline
+\textbf{Nivel 4: Estratégico} & Validación de Incrementos (Sprint Review y aprobación de hitos) & Julio César Lopez Betancur / Supervisor del Proyecto & Patrocinador / Director de Proyecto del Cliente \\ \hline
 
-\textbf{Nivel 5: Externo} & Comunicación Escrita Oficial (Oficios institucionales)  & [Representante RUNT/MinTransporte] & Autoridad Regulatoria / Stakeholder Externo \\ \hline
+\textbf{Nivel 5: Institucional} & Comunicación Oficial Externa (Normativa y convenios legales) & Representantes Ministerio de Transporte / RUNT & Autoridad Regulatoria / Stakeholder Externo \\ \hline
 
 \end{tabular}
 \end{table}
 
-\subsubsection*{Consideraciones del Procedimiento de Escalamiento}
+\subsubsection*{Protocolo de Acción y Flujo de Información}
 \begin{itemize}
-    \item \textbf{Criterio de Urgencia:} La selección de la tecnología y el nivel de escalamiento dependerá de la urgencia de la necesidad de información.
-    \item \textbf{Responsabilidad del Emisor:} El emisor en cada nivel es responsable de asegurar que la información comunicada sea clara, completa y comprendida correctamente antes de escalar al siguiente nivel.
-    \item \textbf{Retroalimentación:} Una vez descodificado el mensaje de escalamiento, el receptor debe proporcionar una respuesta o retroalimentación clara sobre la resolución del incidente.
-    \item \textbf{Registro de Incidentes:} Todos los eventos escalados deben ser documentados en el registro de incidentes como entrada para el proceso de control de comunicacione.
+    \item \textbf{Gestión de Tareas:} Jorge Araque, en su rol de Scrum Master, es el responsable directo de controlar la carga de tareas y remover bloqueos que afecten el progreso del Sprint.
+    \item \textbf{Infraestructura y Seguridad:} Ante fallos en servidores, bases de datos o vulnerabilidades, Juan Esteban Cardona escala la situación directamente al Área de TI del cliente o al Nivel 3 si el incidente impacta el cronograma.
+    \item \textbf{Supervisión del Cliente:} El Supervisor del Proyecto (Nivel 4) actúa como el puente técnico que avala que cada incremento cumple con lo contratado, apoyándose en asesores expertos para la recepción formal.
+    \item \textbf{Plazos de Escalamiento:} Siguiendo el plan de gestión, si un incidente de Nivel 1 no se resuelve en 4 horas laborables, se escala al Nivel 3 para evaluar riesgos en la entrega del incremento.
 \end{itemize}
