@@ -39,24 +39,31 @@ software que se adopte internamente:
 
 \subsection{Metodología de desarrollo de software}
 
-Para el desarrollo del sistema de trámites de licencias, se adopta una metodología ágil incremental basada en el marco de trabajo Scrum. 
+Para el desarrollo del sistema de trámites de licencias, se adopta la metodología ágil Scrum. 
 
-La elección de esta metodología se fundamenta en que el sistema está compuesto por múltiples módulos funcionales independientes. En lugar de utilizar un enfoque tradicional (cascada) que entrega todo al final, Scrum permite construir el software mediante entregas parciales (incrementos), aportando valor continuo a la entidad de tránsito y permitiendo la adaptación ante posibles cambios en integraciones complejas (como RUNT o pasarelas de pago).
+La elección de Scrum se fundamenta en su capacidad para gestionar proyectos con alta complejidad e incertidumbre técnica (como las integraciones con el RUNT, biometría y pasarelas de pago). Scrum permite construir el software de manera iterativa, entregando valor funcional de forma continua a la entidad de tránsito y facilitando la adaptación rápida ante posibles cambios normativos o técnicos.
 
-Para que esta metodología deje de ser un concepto general y se aplique operativamente al desarrollo, se define la siguiente estructura de trabajo:
+Para aplicar esta metodología durante el desarrollo, se define la siguiente estructura de trabajo basada estrictamente en los pilares de Scrum:
 
 \begin{itemize}
-    \item \textbf{Ciclos de trabajo (Sprints):} La fase de ejecución se divide en iteraciones de tiempo fijo (Sprints de 2 a 4 semanas). En cada Sprint, el equipo aborda un conjunto específico de requisitos de la EDT (por ejemplo, el módulo de turnos) y ejecuta su análisis, diseño, codificación y pruebas, dando como resultado un incremento de software 100\% funcional.
+    \item \textbf{Ciclos de trabajo (Sprints):} El desarrollo se organiza en iteraciones de tiempo fijo llamadas Sprints, con una duración de 2 a 4 semanas. En cada Sprint, el equipo toma un conjunto de requisitos priorizados del \textit{Product Backlog} (por ejemplo, el módulo de turnos) y ejecuta su análisis, diseño, codificación y pruebas. El resultado final de cada Sprint debe ser un incremento de software 100\% funcional y listo para ser desplegado.
     
-    \item \textbf{Roles de la metodología:} La ejecución técnica estará liderada por perfiles ágiles integrados en la estructura organizacional:
+    \item \textbf{Roles de la metodología:} La ejecución técnica estará liderada por los tres roles oficiales de Scrum, mapeados a nuestra estructura organizacional:
     \begin{itemize}
-        \item \textit{Product Owner:} Representado por el Analista Funcional en coordinación con el Director de Proyecto del Cliente (Ministerio de Transporte). Son los encargados de priorizar qué se desarrolla primero.
-        \item \textit{Scrum Master / Project Manager:} Encargado de liderar la metodología, eliminar bloqueos e integrar áreas transversales (Infraestructura, Seguridad).
-        \item \textit{Equipo de Desarrollo:} Compuesto por Arquitecto de Software, desarrolladores (Front/Back), QA y DevOps.
+        \item \textit{Product Owner:} Representado por el Analista Funcional en coordinación directa con el Director de Proyecto del Cliente (Ministerio de Transporte). Es el único responsable de gestionar el \textit{Product Backlog} y priorizar qué funcionalidades se desarrollan primero para maximizar el valor del producto.
+        \item \textit{Scrum Master:} Rol asumido por el Project Manager. Es el facilitador del proceso, encargado de asegurar que se respeten las prácticas de Scrum, eliminar bloqueos operativos e integrar áreas transversales (Infraestructura, Seguridad).
+        \item \textit{Equipo de Desarrollo (Developers):} Un equipo multidisciplinario y autoorganizado, compuesto por el Arquitecto de Software, desarrolladores (Frontend/Backend), QA Tester y DevOps, encargados de construir técnicamente el incremento del software.
     \end{itemize}
     
-    \item \textbf{Ceremonias (Eventos de validación):} El trabajo incremental se controla mediante reuniones formales. Diariamente el equipo operativo realiza una Daily Scrum para sincronizar tareas. Al final de cada Sprint, se ejecuta una Sprint Review junto a los directivos y supervisores del cliente para validar y aceptar el módulo entregado.
+    \item \textbf{Ceremonias (Eventos Scrum):} El trabajo y la validación continua se controlan mediante las reuniones formales del marco de trabajo:
+    \begin{itemize}
+        \item \textit{Sprint Planning:} Reunión al inicio del ciclo para definir qué funcionalidades se van a entregar y cómo se van a construir.
+        \item \textit{Daily Scrum:} Sincronización operativa diaria de 15 minutos para el equipo de desarrollo.
+        \item \textit{Sprint Review:} Demostración al final del Sprint junto a los directivos y supervisores del cliente, con el objetivo de validar, probar y aceptar el módulo de software entregado.
+        \item \textit{Sprint Retrospective:} Reunión interna del equipo para identificar mejoras en sus procesos técnicos antes de iniciar el siguiente Sprint.
+    \end{itemize}
 \end{itemize}
+
 
 \subsection{Adaptaciones del ciclo de vida para el proyecto de software}
 
