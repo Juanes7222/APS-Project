@@ -1,126 +1,91 @@
 \subsection{Entregables del Proyecto}
 \label{sec:Entregables del producto}
-A continuación, se definen los entregables principales del proyecto de software. Estas entregas son los resultados verificables que el proyecto debe producir.
+A continuación, se definen los entregables principales del proyecto. 
 
+\subsubsection{Entregables de Gestión e Iniciación}
 
-\subsubsection{Entregables del producto}
-\label{sec:Entregables del producto}
-
-\paragraph{Sistema Nacional Integral de Trámites para Licencias}
+\paragraph{Acta de constitución del proyecto}
 \begin{itemize}
     \item \textbf{ID EDT:} 1.1
-    \item \textbf{Descripción:} Despliegue en ambiente de producción (nube) del sistema completo, capaz de operar a nivel nacional. Integra todos los submódulos descritos a continuación para garantizar una atención ordenada, segura y trazable en cualquier sede del país y en entornos virtuales.
-    \item \textbf{Criterios de aceptación:} Cumplimiento del 100\% de los requerimientos funcionales; superar pruebas de estrés para concurrencia nacional; pruebas de UAT aprobadas por el Ministerio de Transporte.
-    \item \textbf{Evidencia de verificación:} Informe de UAT firmado, build en producción, certificación de pruebas de carga.
-    \item \textbf{Responsable:} Líder Técnico - Project Manager.
+    \item \textbf{Descripción:} Documento que formaliza el inicio del proyecto, autoriza el uso de recursos y define objetivos, alcance preliminar y principales interesados.
+    \item \textbf{Criterios de aceptación:} Firma del patrocinador confirmando la disponibilidad de fondos y recursos.
+    \item \textbf{Evidencia de verificación:} Documento firmado física o digitalmente.
 \end{itemize}
 
-\paragraph{Módulo de gestión de llegada y turnos}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.1
-    \item \textbf{Descripción:} Permite registrar la llegada del solicitante en cualquier sede nacional, asociarla a su expediente, generar turnos con estimación de tiempo, mostrar colas de atención y registrar tiempos para control y reporte.
-    \item \textbf{Criterios de aceptación:} Asignación de turnos sin colisiones; registro preciso de tiempos de atención por sede.
-    \item \textbf{Evidencia de verificación:} Acta de entrega parcial firmada, reportes generados en entorno de pruebas.
-    \item \textbf{Responsable:} Desarrollador Frontend y Backend.
-\end{itemize}
-
-\paragraph{Módulo de verificación documental}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.2
-    \item \textbf{Descripción:} Revisión guiada de documentos exigidos. Presenta la lista mínima por trámite, registra constataciones y observaciones, bloquea la emisión ante falta de requisitos críticos y permite firma digital del funcionario.
-    \item \textbf{Criterios de aceptación:} Bloqueo automático funcional al 100\% en caso de documentos faltantes; firma digital válida y trazable.
-    \item \textbf{Evidencia de verificación:} Casos de prueba UAT aprobados y pipeline de integración verde.
-    \item \textbf{Responsable:} Desarrollador Backend.
-\end{itemize}
-
-\paragraph{Módulo de conciliación de pagos}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.3
-    \item \textbf{Descripción:} Verifica el pago y emite recibos oficiales. Consulta el estado del pago, registra referencias, gestiona conciliaciones manuales y bloquea la expedición nacional si no se comprueba el pago.
-    \item \textbf{Criterios de aceptación:} Conexión exitosa con pasarelas de pago nacionales (ej. PSE); conciliación en tiempo real ($<$ 5 segundos).
-    \item \textbf{Evidencia de verificación:} Logs de transacciones exitosas en entorno de pruebas; recibos PDF generados correctamente.
-    \item \textbf{Responsable:} Desarrollador Backend.
-\end{itemize}
-
-\paragraph{Módulo de validación de aptitud médica}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.4
-    \item \textbf{Descripción:} Verifica certificados médicos de los CRC a nivel nacional. Valida vigencia, registra resultados, notifica acciones en caso de no aptitud y facilita reprogramación.
-    \item \textbf{Criterios de aceptación:} Conexión segura con el Sistema de Control y Vigilancia (SCV) de los CRC; validación estricta de tiempos de caducidad.
-    \item \textbf{Evidencia de verificación:} Documentación de la API de integración; pruebas de validación con certificados de prueba.
-    \item \textbf{Responsable:} Coordinador Técnico de Integraciones.
-\end{itemize}
-
-\paragraph{Módulo de integración con RUNT y modo de contingencia}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.5
-    \item \textbf{Descripción:} Consulta el registro nacional (RUNT) para comprobar duplicados/sanciones. Bloquea emisiones inconsistentes y activa un modo de contingencia para operar localmente si el RUNT nacional cae, sincronizando posteriormente.
-    \item \textbf{Criterios de aceptación:} Sincronización automática post-contingencia sin pérdida de datos; consultas al RUNT con latencia aceptable.
-    \item \textbf{Evidencia de verificación:} Logs de auditoría de sincronización; demostración en vivo del modo contingencia.
-    \item \textbf{Responsable:} Coordinador Técnico de Integraciones.
-\end{itemize}
-
-\paragraph{Módulo de verificación biométrica}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.6
-    \item \textbf{Descripción:} Captura muestras biométricas en el punto de atención, las compara con registros nacionales y activa protocolos de verificación manual en caso de fallos.
-    \item \textbf{Criterios de aceptación:} Integración exitosa con hardware biométrico; cumplimiento de estándares de seguridad de datos sensibles (SIC).
-    \item \textbf{Evidencia de verificación:} Resultados de pruebas de cotejo biométrico; informe de análisis de vulnerabilidades.
-    \item \textbf{Responsable:} Analista QA y Especialista en Seguridad.
-\end{itemize}
-
-\paragraph{Módulo de generación e impresión de licencia}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.7
-    \item \textbf{Descripción:} Construye el documento oficial con datos validados. Gestiona la cola de impresión segura en PVC, registra el número de serie y, adicionalmente, genera la representación virtual de la licencia con elementos criptográficos (ej. QR).
-    \item \textbf{Criterios de aceptación:} Trazabilidad exacta entre el plástico impreso y el expediente digital; generación de licencia virtual en formato seguro.
-    \item \textbf{Evidencia de verificación:} Muestras de impresión física aprobadas; archivo de licencia virtual desencriptado exitosamente en pruebas.
-    \item \textbf{Responsable:} Desarrollador Backend.
-\end{itemize}
-
-\paragraph{Módulo de gestión de excepciones y reprocesos}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.8
-    \item \textbf{Descripción:} Abre y gestiona casos por inconsistencias. Asigna responsables internos, sigue el estado hasta el cierre y registra actividades para auditoría.
-    \item \textbf{Criterios de aceptación:} Flujo de trabajo funcional; correcta asignación de roles y permisos para escalar casos.
-    \item \textbf{Evidencia de verificación:} Demostración de resolución de un ticket de reproceso; actas UAT.
-    \item \textbf{Responsable:} Desarrollador Frontend.
-\end{itemize}
-
-\paragraph{Módulo de notificaciones y portal ciudadano}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.9
-    \item \textbf{Descripción:} Interfaz web-móvil donde el ciudadano gestiona citas nacionales, recibe notificaciones, sea por SMS o email, descarga comprobantes y visualiza su licencia de conducción virtual mediante autenticación segura.
-    \item \textbf{Criterios de aceptación:} Accesibilidad web; doble factor de autenticación operativo para visualizar la licencia virtual.
-    \item \textbf{Evidencia de verificación:} Prototipos UI aprobados; resultados de penetration testing del portal.
-    \item \textbf{Responsable:} Desarrollador Frontend y Especialista en Seguridad.
-\end{itemize}
-
-\paragraph{Módulos transversales}
-\begin{itemize}
-    \item \textbf{ID EDT:} 1.1.10
-    \item \textbf{Descripción:} Agrupa la administración de cuentas y roles, el registro inalterable de acciones críticas, la exportación a archivo y la programación de plazos de retención documental según normativa AGN.
-    \item \textbf{Criterios de aceptación:} Reportes de auditoría inalterables; eliminación segura de documentos tras caducidad legal.
-    \item \textbf{Evidencia de verificación:} Scripts de retención documental ejecutados en BD; reportes de auditoría generados.
-    \item \textbf{Responsable:} Administrador de Base de Datos / DevOps.
-\end{itemize}
-
-\subsubsection{Entregables de Documentación y Gestión}
-
-\paragraph{Documentación Técnica, Diseño y Capacitación}
+\paragraph{Informe de diagnóstico y viabilidad}
 \begin{itemize}
     \item \textbf{ID EDT:} 1.2
-    \item \textbf{Descripción:} Incluye la Matriz de Trazabilidad, diagramas de arquitectura Cloud, manuales de usuario para el portal ciudadano, guías operativas para las sedes y materiales de capacitación.
-    \item \textbf{Criterios de aceptación:} Aprobación por parte de los stakeholders técnicos y operativos.
-    \item \textbf{Evidencia de verificación:} Documentos versionados y encuestas de satisfacción de capacitación.
-    \item \textbf{Responsable:} Analista Funcional.
+    \item \textbf{Descripción:} Estudio del estado actual de los trámites, tráfico de usuarios y viabilidad técnica/operativa para la implementación del sistema.
+    \item \textbf{Criterios de aceptación:} Aprobado por el comité directivo y validado técnicamente.
+    \item \textbf{Evidencia de verificación:} Informe formal aprobado con visto bueno del cliente.
 \end{itemize}
 
-\paragraph{Artefactos de Gestión del Alcance y Cierre}
+\subsubsection{Entregables de Requisitos y Diseño}
+
+\paragraph{Especificación de Requerimientos del Sistema (ERS)}
 \begin{itemize}
-    \item \textbf{ID EDT:} 1.3
-    \item \textbf{Descripción:} Scope Statement, EDT/WBS, Línea Base del Alcance y las Actas formales de cierre y aceptación de todos los módulos a nivel nacional.
-    \item \textbf{Criterios de aceptación:} Aprobación unánime por el comité directivo.
-    \item \textbf{Evidencia de verificación:} Documentos firmados por el patrocinador (Ministerio-RUNT).
-    \item \textbf{Responsable:} Project Manager.
+    \item \textbf{ID EDT:} 2.1
+    \item \textbf{Descripción:} Documentación exhaustiva de requisitos funcionales y no funcionales (gestión de turnos, integraciones, pagos, etc.) que delimita el alcance técnico.
+    \item \textbf{Criterios de aceptación:} Cobertura al 100\% de las necesidades levantadas y validación formal de los requerimientos.
+    \item \textbf{Evidencia de verificación:} Documento ERS avalado y firmado por los stakeholders clave.
+\end{itemize}
+
+\paragraph{Documento de Diseño de Arquitectura y Modelo de Datos (Base de Datos)}
+\begin{itemize}
+    \item \textbf{ID EDT:} 2.2
+    \item \textbf{Descripción:} Diagramas de arquitectura en la nube, flujos de integración y el modelo de entidad-relación de la base de datos que soportará la operación a nivel nacional.
+    \item \textbf{Criterios de aceptación:} Aprobación técnica que asegure escalabilidad, seguridad y eficiencia.
+    \item \textbf{Evidencia de verificación:} Planos de arquitectura y esquemas de BD aprobados por el líder de TI.
+\end{itemize}
+
+\subsubsection{Entregables de Desarrollo, Calidad y Producto}
+
+\paragraph{Módulos y Funcionalidades Específicas del Software}
+\begin{itemize}
+    \item \textbf{ID EDT:} 3.1
+    \item \textbf{Descripción:} Código fuente y componentes desarrollados para la gestión de citas, verificación documental, conciliación de pagos, RUNT, biometría y excepciones.
+    \item \textbf{Criterios de aceptación:} Código revisado (Code Review) sin vulnerabilidades graves y desplegado en el ambiente de pruebas.
+    \item \textbf{Evidencia de verificación:} Repositorio de código actualizado y ambiente de staging funcional.
+\end{itemize}
+
+\paragraph{Resultados de Pruebas del Sistema (UAT y Estrés)}
+\begin{itemize}
+    \item \textbf{ID EDT:} 3.2
+    \item \textbf{Descripción:} Informes y logs resultantes de las pruebas funcionales, de seguridad, estrés y la aceptación de los usuarios finales (User Acceptance Testing).
+    \item \textbf{Criterios de aceptación:} 100\% de bugs críticos resueltos y concurrencia soportada satisfactoriamente.
+    \item \textbf{Evidencia de verificación:} Matriz de trazabilidad de pruebas cubierta y actas UAT firmadas por usuarios.
+\end{itemize}
+
+\paragraph{Producto de Software Funcional (Sistema en Producción)}
+\begin{itemize}
+    \item \textbf{ID EDT:} 4.1
+    \item \textbf{Descripción:} El Sistema Nacional Integral de Trámites completamente desplegado en infraestructura de producción (nube), interconectado y listo para operar.
+    \item \textbf{Criterios de aceptación:} Puesta en vivo funcional con cero caídas en las primeras 48 horas de monitoreo intensivo.
+    \item \textbf{Evidencia de verificación:} URL productiva operativa y certificados de calidad de despliegue.
+\end{itemize}
+
+\subsubsection{Entregables de Transición y Cierre}
+
+\paragraph{Manual Técnico y Manual de Usuario}
+\begin{itemize}
+    \item \textbf{ID EDT:} 4.2
+    \item \textbf{Descripción:} Documentación orientada a administradores IT (Manual Técnico) y a operadores/funcionarios de atención en sedes (Manual de Usuario).
+    \item \textbf{Criterios de aceptación:} Redacción clara, paso a paso de los procesos y guías de soporte validadas.
+    \item \textbf{Evidencia de verificación:} Documentos PDF publicados y compartidos con mesa de ayuda.
+\end{itemize}
+
+\paragraph{Registros de Capacitación}
+\begin{itemize}
+    \item \textbf{ID EDT:} 4.3
+    \item \textbf{Descripción:} Constancias de la formación impartida a los funcionarios sobre el nuevo sistema y manejo de casos.
+    \item \textbf{Criterios de aceptación:} Asistencia igual o superior al 90\% del personal objetivo.
+    \item \textbf{Evidencia de verificación:} Listas de asistencia e informe de evaluación de capacitadores.
+\end{itemize}
+
+\paragraph{Acta de Cierre y Registro de Aceptación Final}
+\begin{itemize}
+    \item \textbf{ID EDT:} 5.1
+    \item \textbf{Descripción:} Documento oficial que certifica que todos los entregables previos cumplen con la línea base del alcance y transfiere la propiedad del producto final.
+    \item \textbf{Criterios de aceptación:} Validación final de que el alcance se cumplió en tiempo, costo e integridad funcional.
+    \item \textbf{Evidencia de verificación:} Acta de aceptación final firmada por Patrocinador y Project Manager.
 \end{itemize}
